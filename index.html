@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .clock {
+        font-size: 40px;
+        font-weight: bold;
+        color: darkturquoise;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <label class="clock" id="clock"></label>
+
+    </div>
+
+
+</body>
+
+<script>
+    setInterval(() => {
+        let date = new Date()
+        let clock = document.getElementById('clock');
+        clock.innerHTML =
+            date.getHours() + ":" +
+            date.getMinutes() + ":" +
+            date.getSeconds();
+}, 1000);
+</script>
+
+
+</html>
